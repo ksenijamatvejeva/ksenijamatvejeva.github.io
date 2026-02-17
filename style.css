@@ -45,29 +45,30 @@ nav a {
 .gallery-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 400px;
     gap: 20px;
-    padding: 0 40px 100px;
 }
 
 .gallery-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 500px;
     gap: 20px;
-    padding: 0 40px 100px;
 }
 
 .gallery-1 {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: 600px;
     gap: 20px;
-    padding: 0 40px 100px;
 }
 
 .gallery-3 img,
 .gallery-2 img,
 .gallery-1 img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -107,4 +108,11 @@ nav a {
 
 .about-text p {
     line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
