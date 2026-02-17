@@ -1,5 +1,4 @@
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,13 @@
 }
 
 /* BODY */
-
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #000000;
 }
 
 /* NAVIGATION */
-
 nav {
     display: flex;
     justify-content: center;
@@ -28,67 +25,86 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    transition: opacity 0.3s ease;
 }
 
-nav a:hover {
-    opacity: 0.5;
-}
-
-/* HERO */
-
+/* HEADER */
 .hero {
     text-align: center;
     margin-bottom: 60px;
 }
 
 .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 400;
-    margin-bottom: 10px;
 }
 
-.hero p {
-    font-size: 16px;
-}
+/* ========================= */
+/* GALLERY STRUCTURES */
+/* ========================= */
 
-/* GALLERY */
-
-.gallery {
+.gallery-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 0 40px 80px;
+    padding: 0 40px 100px;
 }
 
-.gallery img {
+.gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 40px 100px;
+}
+
+.gallery-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 40px 100px;
+}
+
+.gallery-3 img,
+.gallery-2 img,
+.gallery-1 img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Full width image */
-
+/* Full width image inside 3 column grid */
 .full {
     grid-column: span 3;
 }
 
-/* RESPONSIVE */
+/* Full width inside 2 column grid */
+.full-2 {
+    grid-column: span 2;
+}
 
-@media (max-width: 900px) {
+/* ========================= */
+/* ABOUT 2 COLUMNS */
+/* ========================= */
 
-    .gallery {
-        grid-template-columns: 1fr;
-        padding: 0 20px 60px;
-    }
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 40px;
+    align-items: center;
+}
 
-    .full {
-        grid-column: span 1;
-    }
+.about-section img {
+    width: 100%;
+    height: auto;
+}
 
-    .hero h1 {
-        font-size: 36px;
-    }
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 
+.about-text p {
+    line-height: 1.6;
 }
