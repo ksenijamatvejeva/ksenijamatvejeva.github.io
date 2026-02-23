@@ -61,23 +61,65 @@ display: block;
 cursor: pointer;
 }
 
-/* GRID */
+/* ===================== */
+/* GALLERY BASE */
+/* ===================== */
+
+.gallery-3,
+.gallery-2,
+.gallery-1 {
+    gap: 20px;
+    padding: 0 40px 20px; /* mazāka apakšas atstarpe */
+}
+
+/* 3 kolonnas */
 .gallery-3 {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-padding: 0 40px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.gallery-3 img {
-width: 100%;
-height: auto;
-display: block;
-cursor: pointer;
+/* 2 kolonnas */
+.gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
+/* 1 kolonna */
+.gallery-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Attēli */
+.gallery-3 img,
+.gallery-2 img,
+.gallery-1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+/* Pilnas rindas bilde 3 kolonnās */
 .full {
-grid-column: span 3;
+    grid-column: span 3;
+}
+
+/* ===================== */
+/* BODY OF WORK ROW LAYOUT */
+/* ===================== */
+
+.row {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px 20px;
+}
+
+.row img {
+    height: auto;
+    width: 100%;
+    flex: 1;
+    object-fit: contain; /* saglabā proporciju */
 }
 
 /* ABOUT */
@@ -99,18 +141,6 @@ height: auto;
 .about-text p {
 line-height: 1.7;
 font-size: 14px;
-}
-
-.row {
-    display: flex;
-    gap: 20px;
-    padding: 0 40px 20px;
-}
-
-.row img {
-    height: 500px;   /* VIENĀDS augstums rindā */
-    width: auto;
-    display: block;
 }
 
 /* FOOTER */
