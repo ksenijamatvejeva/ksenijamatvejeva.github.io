@@ -70,7 +70,7 @@ nav a:hover {
 .gallery-2,
 .gallery-1 {
     gap: 20px;
-    padding: 0 0 20px;; /* mazāka apakšas atstarpe */
+    padding: 0 40px 20px; /* mazāka apakšas atstarpe */
 }
 
 /* 3 kolonnas */
@@ -129,28 +129,6 @@ nav a:hover {
     line-height: 1.7;
     font-size: 14px;
     margin-bottom: 20px;
-}
-
-/* ===================== */
-/* BODY OF WORK ROW LAYOUT */
-/* ===================== */
-
-.row {
-    display: flex;
-    gap: 20px;
-    padding: 0 0 20px;
-}
-
-.row img {
-    height: 500px;   /* vari mainīt uz 450px vai 550px */
-    width: auto;
-    display: block;
-}
-
-/* Kopējais platuma rāmis */
-.container {
-    max-width: 1200px;   /* vari 1300px ja gribi platāku */
-    margin: 0 auto;
 }
 
 /* ===================== */
