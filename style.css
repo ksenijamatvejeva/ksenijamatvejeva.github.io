@@ -101,6 +101,19 @@ line-height: 1.7;
 font-size: 14px;
 }
 
+.row {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px 20px;
+}
+
+.row img {
+    height: auto;
+    width: 100%;
+    flex: 1;
+    object-fit: contain;
+}
+
 /* FOOTER */
 footer {
 text-align: center;
