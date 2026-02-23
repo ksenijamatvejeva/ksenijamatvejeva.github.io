@@ -108,10 +108,9 @@ font-size: 14px;
 }
 
 .row img {
-    height: auto;
-    width: 100%;
-    flex: 1;
-    object-fit: contain;
+    height: 500px;   /* VIENĀDS augstums rindā */
+    width: auto;
+    display: block;
 }
 
 /* FOOTER */
