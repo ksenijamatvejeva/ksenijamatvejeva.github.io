@@ -48,38 +48,54 @@ nav a:hover {
     margin-top: 10px;
 }
 
-/* ===================== GRID SYSTEM ===================== */
-/* Universāls grid, lai varētu strādāt 1, 2 vai 3 kolonnas */
-.grid {
+/* ===================== GRID SYSTEM – FIĶSĒTAS KOLONNAS ===================== */
+.grid-3, .grid-2, .grid-1, .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 40px 40px;
+}
+
+/* Fiksētas kolonnas */
+.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-1 {
+    grid-template-columns: 1fr;
+}
+
+/* ROW – paliek horizontāli */
+.row {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+/* Attēli */
+.grid-3 img, .grid-2 img, .grid-1 img, .row img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===================== WORK PAGE GALLERY-3 ===================== */
+.gallery-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 0 40px 100px;
 }
 
-.grid img {
+.gallery-3 img {
     width: 100%;
-    height: auto;
     display: block;
     cursor: pointer;
 }
 
-/* Papildu klase full, lai bilde aizņem visu rindu */
 .full {
     grid-column: span 3;
-}
-
-/* Row sistēma (flex) */
-.row {
-    display: flex;
-    gap: 20px;
-    padding: 0 40px 20px;
-}
-
-.row img {
-    width: 100%;
-    flex: 1;
-    object-fit: contain;
 }
 
 /* ===================== ABOUT SECTION ===================== */
@@ -90,7 +106,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 100px auto;
     padding: 0 40px;
-    align-items: start; /* izlīdzina tekstu augšā ar bildi */
+    align-items: start; /* Teksts pie bildes augšas */
 }
 
 .about-section img {
@@ -137,4 +153,21 @@ footer {
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+
+/* ===================== RESPONSIVITY – SAGLABĀ RINDAS ===================== */
+@media (max-width: 800px) {
+    /* Saglabā kolonnu skaitu, samazina padding/fona fontus */
+    .grid-3, .grid-2, .grid-1, .row, .gallery-3 {
+        padding: 0 20px 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero h1 { font-size: 24px; }
+    .hero h2 { font-size: 14px; }
 }
