@@ -142,10 +142,9 @@ nav a:hover {
 }
 
 .row img {
-    height: auto;
-    width: 100%;
-    flex: 1;
-    object-fit: contain; /* saglabā proporciju */
+    height: 500px;   /* vari mainīt uz 450px vai 550px */
+    width: auto;
+    display: block;
 }
 
 /* ===================== */
