@@ -132,6 +132,22 @@ nav a:hover {
 }
 
 /* ===================== */
+/* BODY OF WORK ROW LAYOUT */
+/* ===================== */
+
+.row {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px 20px;
+}
+
+.row img {
+    height: 500px;   /* vari mainīt uz 450px vai 550px */
+    width: auto;
+    display: block;
+}
+
+/* ===================== */
 /* FOOTER */
 /* ===================== */
 
