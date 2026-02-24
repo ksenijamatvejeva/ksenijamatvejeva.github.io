@@ -112,6 +112,17 @@ nav a:hover {
     display: block;
 }
 
+.justified-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 40px 40px;
+}
+
+.justified-gallery img {
+    display: block;
+}
+
 .container {
     width: calc(100% - 80px);   /* 40px no katras malas */
     max-width: 1400px;          /* lai uz milzīga ekrāna neizplešas bezgalīgi */
