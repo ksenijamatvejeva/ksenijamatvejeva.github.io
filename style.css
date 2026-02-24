@@ -52,7 +52,7 @@ nav a:hover {
 .grid-3, .grid-2, .grid-1, .row {
     display: grid;
     gap: 20px;
-    padding: 0 40px 40px;
+    padding: 0 0 40px;
 }
 
 /* Fiksētas kolonnas */
@@ -85,7 +85,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    padding: 0 40px 100px;
+    padding: 0 0 100px;
 }
 
 .gallery-3 img {
@@ -96,6 +96,26 @@ nav a:hover {
 
 .full {
     grid-column: span 3;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 20px;
+    padding: 0 0 40px;
+    align-items: center;
+}
+
+.gallery-row img {
+    height: 35vw;   /* ← reaģē uz ekrāna platumu */
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.container {
+    width: calc(100% - 80px);   /* 40px no katras malas */
+    max-width: 1400px;          /* lai uz milzīga ekrāna neizplešas bezgalīgi */
+    margin: 0 auto;
 }
 
 /* ===================== ABOUT SECTION ===================== */
