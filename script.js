@@ -1,36 +1,36 @@
-function justifyGallery() {
-    const gallery = document.getElementById("gallery");
-    if (!gallery) return;
+function justifyAllGalleries() {
+    const galleries = document.querySelectorAll(".justified-gallery");
 
-    const images = Array.from(gallery.querySelectorAll("img"));
-    const gap = 20;
-    const containerWidth = gallery.clientWidth;
-    const targetRowHeight = 350;
+    galleries.forEach(gallery => {
+        const images = Array.from(gallery.querySelectorAll("img"));
+        const gap = 20;
+        const containerWidth = gallery.clientWidth;
+        const targetRowHeight = 350;
 
-    let row = [];
-    let rowWidth = 0;
+        let row = [];
+        let rowAspectSum = 0;
 
-    images.forEach(img => {
-        const aspectRatio = img.naturalWidth / img.naturalHeight;
-        const width = targetRowHeight * aspectRatio;
+        images.forEach((img, index) => {
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+            row.push(img);
+            rowAspectSum += aspectRatio;
 
-        row.push({ img, aspectRatio });
-        rowWidth += width + gap;
+            const rowWidth = rowAspectSum * targetRowHeight + gap * (row.length - 1);
 
-        if (rowWidth >= containerWidth) {
-            const totalAspect = row.reduce((sum, item) => sum + item.aspectRatio, 0);
-            const newHeight = (containerWidth - gap * (row.length - 1)) / totalAspect;
+            if (rowWidth >= containerWidth || index === images.length - 1) {
+                const newHeight = (containerWidth - gap * (row.length - 1)) / rowAspectSum;
 
-            row.forEach(item => {
-                item.img.style.height = newHeight + "px";
-                item.img.style.width = "auto";
-            });
+                row.forEach(image => {
+                    image.style.height = newHeight + "px";
+                    image.style.width = "auto";
+                });
 
-            row = [];
-            rowWidth = 0;
-        }
+                row = [];
+                rowAspectSum = 0;
+            }
+        });
     });
 }
 
-window.addEventListener("load", justifyGallery);
-window.addEventListener("resize", justifyGallery);
+window.addEventListener("load", justifyAllGalleries);
+window.addEventListener("resize", justifyAllGalleries);

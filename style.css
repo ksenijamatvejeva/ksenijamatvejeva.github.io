@@ -1,4 +1,8 @@
-/* ===================== GLOBAL ===================== */
+/* ================================================= */
+/* ===================== GLOBAL ==================== */
+/* Attiecas uz VISĀM lapām */
+/* ================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +15,11 @@ body {
     color: #000;
 }
 
-/* ===================== NAVIGATION ===================== */
+/* ================================================= */
+/* ================== NAVIGATION =================== */
+/* Attiecas uz VISĀM lapām */
+/* ================================================= */
+
 nav {
     display: flex;
     justify-content: center;
@@ -31,7 +39,11 @@ nav a:hover {
     color: #999;
 }
 
-/* ===================== HEADER ===================== */
+/* ================================================= */
+/* ===================== HEADER ==================== */
+/* Attiecas uz VISĀM lapām */
+/* ================================================= */
+
 .hero {
     text-align: center;
     margin-bottom: 60px;
@@ -48,88 +60,67 @@ nav a:hover {
     margin-top: 10px;
 }
 
-/* ===================== GRID SYSTEM – FIĶSĒTAS KOLONNAS ===================== */
-.grid-3, .grid-2, .grid-1, .row {
-    display: grid;
-    gap: 20px;
-    padding: 0 0 40px;
-}
-
-/* Fiksētas kolonnas */
-.grid-3 {
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid-2 {
-    grid-template-columns: 1fr 1fr;
-}
-
-.grid-1 {
-    grid-template-columns: 1fr;
-}
-
-/* ROW – paliek horizontāli */
-.row {
-    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-}
-
-/* Attēli */
-.grid-3 img, .grid-2 img, .grid-1 img, .row img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* ===================== WORK PAGE GALLERY-3 ===================== */
-.gallery-3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 0 0 100px;
-}
-
-.gallery-3 img {
-    width: 100%;
-    display: block;
-    cursor: pointer;
-}
-
-.full {
-    grid-column: span 3;
-}
-
-.gallery-row {
-    display: flex;
-    gap: 20px;
-    padding: 0 0 40px;
-    align-items: center;
-}
-
-.gallery-row img {
-    height: 35vw;   /* ← reaģē uz ekrāna platumu */
-    width: auto;
-    object-fit: contain;
-    display: block;
-}
-
-.justified-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 40px 40px;
-}
-
-.justified-gallery img {
-    display: block;
-}
+/* ================================================= */
+/* =================== CONTAINER =================== */
+/* Body of Work + Work With Women */
+/* ================================================= */
 
 .container {
-    width: calc(100% - 80px);   /* 40px no katras malas */
-    max-width: 1400px;          /* lai uz milzīga ekrāna neizplešas bezgalīgi */
+    width: calc(100% - 80px);
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-/* ===================== ABOUT SECTION ===================== */
+/* ================================================= */
+/* ================= IMAGE ROW SYSTEM ============== */
+/* LIETO: Body of Work + Work With Women */
+/* Bez crop, bez vienāda augstuma starp rindām */
+/* KATRĀ rindā bildes vienāda augstuma */
+/* ================================================= */
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.row img {
+    height: 30vw;      /* Vienāds augstums konkrētajā rindā */
+    width: auto;       /* Saglabā proporciju */
+    display: block;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* Attiecas uz VISĀM lapām */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .row img {
+        height: auto;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .hero h1 { font-size: 24px; }
+    .hero h2 { font-size: 14px; }
+}
+
+/* ================================================= */
+/* ================== ABOUT PAGE =================== */
+/* Attiecas TIKAI uz about.html */
+/* ================================================= */
+
 .about-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -137,7 +128,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 100px auto;
     padding: 0 40px;
-    align-items: start; /* Teksts pie bildes augšas */
+    align-items: start;
 }
 
 .about-section img {
@@ -150,55 +141,14 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* ===================== FOOTER ===================== */
+/* ================================================= */
+/* ===================== FOOTER ==================== */
+/* Attiecas uz VISĀM lapām */
+/* ================================================= */
+
 footer {
     text-align: center;
     padding: 60px 0 40px;
     font-size: 12px;
     color: #777;
-}
-
-/* ===================== LIGHTBOX ===================== */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.lightbox .close {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* ===================== RESPONSIVITY – SAGLABĀ RINDAS ===================== */
-@media (max-width: 800px) {
-    /* Saglabā kolonnu skaitu, samazina padding/fona fontus */
-    .grid-3, .grid-2, .grid-1, .row, .gallery-3 {
-        padding: 0 20px 30px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .hero h1 { font-size: 24px; }
-    .hero h2 { font-size: 14px; }
 }
