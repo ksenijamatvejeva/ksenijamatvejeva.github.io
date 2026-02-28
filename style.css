@@ -5,143 +5,164 @@
 }
 
 body {
-  background: #f6f5f2;
-  color: #1a1a1a;
   font-family: 'Inter', sans-serif;
-  line-height: 1.8;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
 }
 
-/* HERO */
-
-.hero {
-  height: 100vh;
-  background: url("images/hero.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero-content {
-  background: rgba(246,245,242,0.6);
-  padding: 60px 40px;
-}
-
-h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.5rem;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
-
-.hero-text {
-  max-width: 500px;
-  margin: 0 auto 40px auto;
-  font-size: 1.1rem;
-}
-
-.button {
-  text-decoration: none;
-  border: 1px solid #1a1a1a;
-  padding: 12px 28px;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  color: #1a1a1a;
-  transition: 0.3s ease;
-}
-
-.button:hover {
-  background: #1a1a1a;
-  color: #f6f5f2;
-}
-
-/* SAJŪTAS TEKSTS */
-
-.feeling {
-  text-align: center;
-  padding: 140px 20px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-}
-
-.spacer {
-  height: 40px;
-}
-
-/* BILDES */
-
-.image-full {
-  padding: 120px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.image-full img {
+.container {
   width: 85%;
-  max-width: 1200px;
+  margin: auto;
 }
 
-.image-vertical {
-  padding: 120px 0;
+.section {
+  padding: 80px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HEADER */
+
+.header {
+  padding: 40px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #2f4f75;
+}
+
+/* DROPDOWN */
+
+.nav-left {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 25px;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.dropdown a {
+  display: block;
+  margin: 6px 0;
+}
+
+.nav-left:hover .dropdown {
+  display: block;
+}
+
+/* TEXT LINKS */
+
+.link-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
   display: flex;
   justify-content: center;
 }
 
-.image-vertical img {
-  width: 40%;
-  max-width: 500px;
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ļoti svarīgi */
+}
+/* GRID 2 COL */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-/* KUSTĪBA */
-
-.movement {
-  text-align: center;
-  padding: 160px 20px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  max-width: 700px;
-  margin: 0 auto;
+.reverse {
+  grid-template-columns: 1fr 1fr;
 }
 
-/* CTA */
-
-.cta {
-  text-align: center;
-  padding: 160px 20px;
+.reverse > div:first-child {
+  order: 2;
 }
 
-.cta h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-  margin-bottom: 40px;
+/* PORTFOLIO GRID */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.button-outline {
-  text-decoration: none;
-  border: 1px solid #1a1a1a;
-  padding: 14px 32px;
-  color: #1a1a1a;
-  transition: 0.3s ease;
-}
-
-.button-outline:hover {
-  background: #1a1a1a;
-  color: #f6f5f2;
+.portfolio-grid .full {
+  grid-column: span 3;
 }
 
 /* FOOTER */
 
-footer {
-  text-align: center;
-  padding: 80px 20px;
-  font-size: 0.8rem;
-  opacity: 0.5;
+.footer {
+  padding: 60px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid .full {
+    grid-column: span 1;
+  }
+
 }

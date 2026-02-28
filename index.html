@@ -3,59 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ksenija Matvejeva</title>
+  <title>KSEMA</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+<script>
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  speed: 1200,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+});
+</script>
 <body>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Ksenija Matvejeva</h1>
-    <p class="subtitle">poētiska fotogrāfija & kustība</p>
-    <p class="hero-text">Fotogrāfija kā telpa, kur tavs ķermenis var justies brīvs.</p>
-    <a href="#contact" class="button">Pieteikt sesiju</a>
+<!-- HEADER -->
+<header class="header">
+  <div class="container nav">
+
+    <div class="nav-left">
+      INFO +
+      <div class="dropdown">
+        <a href="par-mani.html">Par mani</a>
+        <a href="#">Atsauksmes</a>
+        <a href="kontakti.html">Kontakti</a>
+      </div>
+    </div>
+
+    <div class="logo">
+      <a href="index.html">KSEMA</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="portfolio.html">PORTFOLIO</a>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- HERO IMAGE -->
+<section class="section container">
+  <img src="w17.JPG" alt="">
+</section>
+
+
+<!-- INTRO -->
+<section class="section container center">
+  <p class="location">Sieviešu fotografēšana Baltijas jūras krastā.</p>
+  <h1>Ksenija Matvejeva</h1>
+  <a href="kontakti.html" class="link-btn">PIETEIKT SESIJU</a>
+</section>
+
+
+<!-- SLIDER -->
+<section class="section container">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="w16.JPG"></div>
+      <div class="swiper-slide"><img src="w4.JPG"></div>
+      <div class="swiper-slide"><img src="w15.JPG"></div>
+    </div>
   </div>
 </section>
 
-<section class="feeling">
-  <p>Tev nav jāpozē.</p>
-  <p>Tev nav jābūt perfektai.</p>
-  <p>Tev vienkārši jāatnāk.</p>
 
-  <div class="spacer"></div>
-
-  <p>Mēs kustamies.</p>
-  <p>Mēs elpojam.</p>
-  <p>Ļaujam jūrai mūs turēt.</p>
+<!-- ABOUT -->
+<section class="section container two-col">
+  <div class="text">
+    <p>
+      SVEIKA, ESMU KSENIJA MATVEJEVA,<br>
+      MEITENE, KAS BŪS AIZ KAMERAS.<br>
+      ĶERS MIRKĻUS UN VADĪS TEVI PROCESOS.
+    </p>
+    <a href="par-mani.html" class="link-btn">VAIRĀK PAR MANI</a>
+  </div>
+  <div>
+    <img src="b13.JPG">
+  </div>
 </section>
 
-<section class="image-full">
-  <img src="images/sea1.jpg" alt="">
+
+<!-- PORTRETI -->
+<section class="section container two-col reverse">
+  <div>
+    <img src="w5.JPG">
+  </div>
+  <div class="text">
+    <h2>SIEVIEŠU PORTRETI</h2>
+    <p>
+      Katrs portrets ir sajūtu atspulgs.
+      Mēs nesteidzamies.
+      Ļaujam vējam spēlēties matos.
+    </p>
+    <a href="portfolio.html" class="link-btn">PORTFOLIO</a>
+  </div>
 </section>
 
-<section class="image-vertical">
-  <img src="images/vertical.jpg" alt="">
+
+<!-- CONTACT -->
+<section class="section container center">
+  <h2>SAZINĀTIES</h2>
+  <p>Jautājumi vai idejas? Raksti man.</p>
+  <a href="kontakti.html" class="link-btn">PIETEIKT SESIJU</a>
 </section>
 
-<section class="movement">
-  <p>
-    Šovasar es apvienoju fotogrāfiju ar kustību.<br><br>
-    Mēs sākam lēni.<br>
-    Ieklausāmies tavā ķermenī.<br><br>
-    Fotosesija kļūst par mazu rituālu.
-  </p>
+<section class="section container">
+  <img src="w9_1.JPG" alt="">
 </section>
 
-<section class="cta" id="contact">
-  <h2>Gatava šo piedzīvot?</h2>
-  <a href="mailto:tavs.epasts@gmail.com" class="button-outline">Pieteikt sesiju</a>
-</section>
-
-<footer>
-  <p>© 2026 Ksenija Matvejeva</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-text">© 2026 Ksema</div>
+  </div>
 </footer>
 
 </body>
