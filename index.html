@@ -16,31 +16,22 @@
 <body>
 
 <header class="header">
-  <div class="container nav">
+  <div class="nav-wrapper">
 
-    <div class="nav-left">
-      INFO +
-      <div class="dropdown">
-        <a href="par-mani.html">Par mani</a>
-        <a href="#">Atsauksmes</a>
-        <a href="kontakti.html">Kontakti</a>
-      </div>
-    </div>
+    <a href="par-mani.html" class="nav-link">PAR MANI</a>
 
     <div class="logo">
       <a href="index.html">KSEMA</a>
     </div>
 
-    <div class="nav-right">
-      <a href="portfolio.html">PORTFOLIO</a>
-    </div>
+    <a href="portfolio.html" class="nav-link">PORTFOLIO</a>
 
   </div>
 </header>
 
 <!-- HERO -->
 <section class="section-small container">
-  <img src="w17.JPG" alt="">
+  <img src="w17_1.JPG" alt="">
 </section>
 
 <!-- INTRO -->
@@ -66,85 +57,70 @@ Izklausās jautri? Uzrakstiet man ziņu, un kopā radīsim kaut ko pārsteidzoš
   </div>
 </section>
 
-
 <!-- ABOUT PREVIEW -->
-<section class="section-small container center">
-  <h1 class="main-heading">SVEIKA, ESMU MEITENE,<br>
-      KAS BŪS AIZ KAMERAS, <br>IEMŪŽINOT TAVUS MIRKĻUS.</h1>
-<a href="#" class="section-link">VAIRĀK PAR MANI</a> 
+<section class="section-small container about-preview center">
+
+  <img src="b20.jpg" alt="" class="about-image">
+
+  <h1 class="main-heading about-title">
+    SVEIKA, ESMU MEITENE,<br>
+    KAS BŪS AIZ KAMERAS,<br>
+    IEMŪŽINOT TAVUS MIRKĻUS.
+  </h1>
+
+  <a href="#" class="section-link about-link">
+    VAIRĀK PAR MANI
+  </a>
+
 </section>
 
+<section class="section two-col blue-section container">
 
-<!-- PORTRETI -->
- <section class="section container two-col reverse">
-  <div> 
-    <img src="w5.JPG"> 
+  <!-- Kreisā puse – bilde -->
+  <div>
+    <img src="w5.JPG" alt="">
   </div>
-  <div class="text"> 
-    <h1 class="main-heading">SIEVIEŠU PORTRETI</h1> 
-    <p class="main-text"> 
-      Katrs portrets ir sajūtu atspulgs. <br>Mēs nesteidzamies. <br>Ļaujam vējam spēlēties matos. 
-    </p> 
-    <a href="portfolio.html" href="#" class="section-link">VAIRĀK PAR MANI</a>  
-  </div>
- </section>
 
- <!-- TESTIMONIALS -->
-<section class="section container">
-  <div class="swiper testimonialSwiper">
-    <div class="swiper-wrapper">
+  <!-- Labā puse – teksts + atsauksmes + poga -->
+  <div class="text-side">
 
-      <div class="swiper-slide testimonial">
-  <p class="main-text"> 
-    “No pirmā mirkļa jutos neticami ērti un relaksēti.<br>
-    Viņas spēja notvert gaismu un mirkli ir apbrīnojama.<br>
-    Gala fotogrāfijas pārsniedza manas cerības.”
-  </p>
-  <div class="testimonial-author">Marta</div>
-</div>
+    <h2 class="main-heading">SIEVIEŠU PORTRETI</h2>
 
-      <div class="swiper-slide testimonial">
-  <p class="main-text"> 
-          “Fotogrāfijās jūtams miers, skaista gaisma un krāsas.<br>
-          Es izbaudīju procesu, laiku un, protams, bildes.”
-        </p>
-        <div class="testimonial-author">Daniela</div>
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide testimonial">
+          <p class="main-text-italic">
+            “No pirmā mirkļa jutos neticami ērti un relaksēti.<br>
+            Viņas spēja notvert gaismu un mirkli ir apbrīnojama.”
+          </p>
+          <div class="testimonial-author">Marta</div>
+        </div>
+
+        <div class="swiper-slide testimonial">
+          <p class="main-text-italic">
+            “Fotogrāfijās jūtams miers, skaista gaisma un krāsas.”
+          </p>
+          <div class="testimonial-author">Daniela</div>
+        </div>
+
+        <div class="swiper-slide testimonial">
+          <p class="main-text-italic">
+            “Eksperimentāla, bet ļoti patīkama pieredze.”
+          </p>
+          <div class="testimonial-author">Anita</div>
+        </div>
+
       </div>
-
-      <div class="swiper-slide testimonial">
-  <p class="main-text"> 
-          “Eksperimentāla, bet ļoti patīkama pieredze.<br>
-          Košas un skaistas bildes ar burvīgu atmosfēru.”
-        </p>
-        <div class="testimonial-author">Anita</div>
-      </div>
-
-      <div class="swiper-slide testimonial">
-  <p class="main-text"> 
-          “Ak vai, cik skaisti.<br>
-          Katram kadram savs stāsts.”
-        </p>
-        <div class="testimonial-author">Beatrise</div>
-      </div>
-
-      <div class="swiper-slide testimonial">
-  <p class="main-text"> 
-          “Neliels ceļojums pie jūras un skaistas bildes.<br>
-          Process bija ļoti baudāms.”
-        </p>
-        <div class="testimonial-author">Elizabete</div>
-      </div>
-
     </div>
-  </div>
-</section>
 
- <!-- CONTACT --> 
-  <section class="section container center"> 
-    <h1 class="main-heading">SAZINĀTIES</h1> 
-    <p class="main-text">Jautājumi vai idejas? Raksti man.</p> 
-    <a href="kontakti.html" href="#" class="section-link">PIETEIKT SESIJU</a> 
-  </section>
+    <a href="portfolio.html" class="section-link portfolio-btn">
+      SKATĪT PORTFOLIO
+    </a>
+
+  </div>
+
+</section>
 
 <!-- FOOTER IMAGE -->
 <section class="section-small container">
