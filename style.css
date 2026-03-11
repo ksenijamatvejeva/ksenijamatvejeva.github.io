@@ -38,6 +38,7 @@ img {
 
 /* Galvenais virsraksts */
 .main-heading {
+  font-family:'Playfair Display', serif;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -46,7 +47,7 @@ img {
 
 /* Pamatteksts */
 .main-text {
-  font-size: 13px;
+  font-size: 16px;
   max-width: 600px;
   margin: 20px auto;
   text-align: center;
@@ -55,7 +56,7 @@ img {
 
 /* Pamatteksts italic */
 .main-text-italic {
-  font-size: 15px;
+  font-size: 16px;
   max-width: 600px;
   margin: 20px auto;
   text-align: center;
@@ -72,10 +73,14 @@ img {
   color: #000;
   text-decoration: none;
   transition: 0.3s;
+  border: 2px solid #6c8089;
+  padding: 10px 20px;
+  display: inline-block;
 }
 
 .section-link:hover {
-  color: #6c8089;
+  background: #6c8089;
+  color: white;
 }
 
 /* ===================================== */
@@ -245,6 +250,20 @@ img {
   height: 100%;
 }
 
+/* Portfolio poga zilajā sekcijā */
+.blue-section .portfolio-btn {
+  color: #fff;               /* balti burti sākumā */
+  border: 2px solid #fff;    /* balts kvadrāts ap burtiem */
+  background: transparent;
+  transition: 0.3s;
+}
+
+.blue-section .portfolio-btn:hover {
+  color: #6c8089;            /* burtu krāsa hoverā zila */
+  background: #fff;           /* fons kļūst balts */
+  border-color: #fff;         /* border paliek balts */
+}
+
 /* ===================================== */
 /* ABOUT PREVIEW */
 /* ===================================== */
@@ -272,17 +291,63 @@ img {
 /* FOOTER */
 /* ===================================== */
 
+/* Footer konteiners */
 .footer {
-  padding: 60px 0;
+  padding: 40px 0;
+  background: #111; /* vai atbilstoša fona krāsa */
+  color: #fff;
 }
 
 .footer-inner {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* kreisā, vidū, labā */
+  align-items: center;
+  text-align: center;
 }
 
-.footer-text {
+/* Kreisā puse */
+.footer-left {
+  text-align: left;
   font-size: 14px;
+}
+
+/* Vidū Instagram ikona */
+.footer-center img {
+  width: 24px;
+  height: 24px;
+  transition: 0.3s;
+}
+
+.footer-center img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Labajā puse: back to top */
+.footer-right a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-right a:hover {
+  color: #6c8089; /* hover efekts zils */
+  transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 767px) {
+  .footer-inner {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
 }
 
 /* ===================================== */
@@ -316,6 +381,23 @@ img {
   .blue-section {
     padding: 60px 20px;
   }
+
+  .blue-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.portrait-image {
+  order: 1;
+}
+
+.text-side {
+  order: 2;
+  text-align: center;
+  align-items: center;
+}
+
+
 
   /* 📌 TIPOGRĀFIJA MOBILE */
 
@@ -355,4 +437,100 @@ img {
     padding: 70px 30px;
   }
 
+}
+
+/* ===================================== */
+/* Noņemt iespēju iezīmēt tekstu */
+/* ===================================== */
+
+body {
+  user-select: none;
+}
+
+.hover-color{
+filter: grayscale(100%);
+transition: 0.6s ease;
+}
+
+.hover-color:hover{
+filter: grayscale(0%);
+}
+
+/* Divkolonnas izkārtojums desktopam */
+.about-preview-section {
+  padding: 80px 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center; /* vertikāli centrē tekstu attiecībā pret bildi */
+}
+
+/* Bildes izmērs un hover efekts */
+.about-image img {
+  width: 100%;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: 0.6s ease;
+}
+
+.about-image img:hover {
+  filter: grayscale(0%);
+}
+
+/* Teksta kolonna */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Teksta justify */
+.main-text.justify {
+  text-align: justify;
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+/* Poga */
+.about-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  border: 2px solid #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.about-btn:hover {
+  background: #fff;
+  color: #6c8089; /* zila krāsa hoverā */
+  border-color: #fff;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 767px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-text {
+    align-items: center;
+  }
+
+  .main-text.justify {
+    text-align: justify;
+  }
+
+  .about-btn {
+    justify-content: center;
+  }
 }
