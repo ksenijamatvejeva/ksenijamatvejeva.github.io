@@ -280,6 +280,12 @@ img {
 .about-title {
   margin-top: -70px;
   position: relative;
+
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
 }
 
 .about-link {
@@ -294,8 +300,8 @@ img {
 /* Footer konteiners */
 .footer {
   padding: 40px 0;
-  background: #111; /* vai atbilstoša fona krāsa */
-  color: #fff;
+  background: #ffffff; /* vai atbilstoša fona krāsa */
+  color: #000000;
 }
 
 .footer-inner {
@@ -303,6 +309,11 @@ img {
   grid-template-columns: 1fr auto 1fr; /* kreisā, vidū, labā */
   align-items: center;
   text-align: center;
+}
+
+.footer-right {
+  justify-self: end;
+  text-align: right;
 }
 
 /* Kreisā puse */
@@ -326,7 +337,7 @@ img {
 /* Labajā puse: back to top */
 .footer-right a {
   font-size: 20px;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -386,6 +397,7 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 
 .portrait-image {
   order: 1;
