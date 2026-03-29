@@ -31,7 +31,7 @@ img {
 
 /* Apakšvirsraksts */
 .subheading {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -83,6 +83,12 @@ img {
   color: white;
 }
 
+.series-caption {
+  grid-column: 1 / -1; /* lai iet zem visām bildēm */
+  text-align: left;
+  margin-top: 10px;
+  font-size: 14px;
+}
 /* ===================================== */
 /* LAYOUT */
 /* ===================================== */
@@ -545,4 +551,13 @@ filter: grayscale(0%);
   .about-btn {
     justify-content: center;
   }
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.about-text {
+  max-width: 500px;
 }
