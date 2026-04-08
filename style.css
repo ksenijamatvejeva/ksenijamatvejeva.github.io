@@ -499,6 +499,29 @@ body {
 }
 }
 
+/* FIX: lai nekas neiziet ārpus ekrāna */
+.blue-section {
+  overflow: hidden;
+}
+
+/* FIX: swiper nekad nepārsniedz konteineru */
+.testimonialSwiper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* FIX: swiper slide neizplešas */
+.testimonialSwiper .swiper-slide {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+/* FIX: teksts nepārrauj layout */
+.main-text-italic {
+  word-break: break-word;
+}
+
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1023px) {
 
